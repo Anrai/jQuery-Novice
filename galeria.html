@@ -5,6 +5,23 @@
 <title>Workshop SG Campus</title>
 <link rel="stylesheet" href="css/estilos.css" />
 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/themes/default/default.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/themes/light/light.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/themes/dark/dark.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/themes/bar/bar.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+$(document).ready(function(e) {
+    $("#slider").nivoSlider();
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+});
+
+</script>
 
 </head>
 
@@ -22,13 +39,44 @@
       	</nav>
       </header>
         
-        <section id="wrapperSlider">
-
+        <section id="wrapperSlider"  class="slider-wrapper theme-dark">
+            <div id="slider" class="nivoSlider">
+                <img src="img/slider/img1.jpg" alt="">
+                <img src="img/slider/img2.jpg" alt="">
+                <img src="img/slider/img3.jpg" alt="">
+                <img src="img/slider/img4.jpg" alt="">
+                <img src="img/slider/img5.jpg" alt="">
+                <img src="img/slider/img6.jpg" alt="">
+            </div>
         </section>
         
         <section id="main-content">
-        	
-      </section>
+        	<h2>Galería</h2>
+
+            <ul class="gallery">
+                <li>
+                    <a href="img/fullscreen/1.jpg" rel="prettyPhoto[galeria1]">
+                        <img src="img/thumbnails/t_1.jpg" alt="Mi primer foto" width="60" height="60">
+                    </a>
+                </li>
+                <li>
+                    <a href="img/fullscreen/2.jpg" rel="prettyPhoto[galeria1]">
+                        <img src="img/thumbnails/t_2.jpg" alt="Mi segunda foto" width="60" height="60">
+                    </a>
+                </li>
+                <li>
+                    <a href="img/fullscreen/3.jpg" rel="prettyPhoto[galeria1]">
+                        <img src="img/thumbnails/t_3.jpg" alt="Mi tercer foto" width="60" height="60">
+                    </a>
+                </li>
+                <li>
+                    <a href="img/fullscreen/4.jpg" rel="prettyPhoto[galeria1]">
+                        <img src="img/thumbnails/t_4.jpg" alt="Mi cuarta foto" width="60" height="60">
+                    </a>
+                </li>
+            </ul>
+
+        </section>
         
       
     
