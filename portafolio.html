@@ -13,12 +13,31 @@
 <script src="http://code.jquery.com/jquery-migrate-1.1.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
 <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(e) {
     $("#slider").nivoSlider();
-    $("").();
-});
+    $("#lista-portafolio").isotope({
+        filter: '*',
+        layautMode: 'masonry',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear'
+        }
+    });
+    $("#filtro-portafolio").find('a').click(function(){
+        var selector = $(this).attr('data-filter');
 
+        $("#lista-portafolio").isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+        });
+    });
+});
 </script>
 
 </head>
@@ -50,6 +69,14 @@ $(document).ready(function(e) {
         
       <section id="main-content">
         <div id="portafolio">
+
+            <ul id="filtro-portafolio">
+                <li><a href="#" class="current" data-filter="*">Todas</a></li>
+                <li><a href="#" data-filter=".tipo1">Tipo 1</a></li>
+                <li><a href="#" data-filter=".tipo2">Tipo 2</a></li>
+                <li><a href="#" data-filter=".tipo3">Tipo 3</a></li>
+            </ul>
+
             <ul id="lista-portafolio">
                 <li class="tipo1">
                     <img src="img/portafolio/arana1.png" alt="Figura 1" width="221" height="140">
@@ -59,6 +86,15 @@ $(document).ready(function(e) {
                 </li>
                 <li class="tipo1">
                     <img src="img/portafolio/arana3.png" alt="Figura 3" width="221" height="140">
+                </li>
+                <li class="tipo2">
+                    <img src="img/portafolio/arana4.png" alt="Figura 4" width="221" height="140">
+                </li>
+                <li class="tipo2">
+                    <img src="img/portafolio/arana5.png" alt="Figura 5" width="221" height="140">
+                </li>
+                <li class="tipo3">
+                    <img src="img/portafolio/arana6.png" alt="Figura 6" width="221" height="140">
                 </li>
             </ul>
         </div>
